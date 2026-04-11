@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Special+Elite&display=swap');
+@import "tailwindcss";
+:root {
+    --paper: #ece5d3;
+    --ink: #15120d;
+    --frame: #300000;
+    --frame-dark: #180000;
+    --accent: #7d0000;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    min-height: 100%;
+}
+
+body {
+    font-family: 'Special Elite', serif;
+    color: var(--ink);
+    background: radial-gradient(circle at 50% 0%, #4d0000 0%, #2d0000 40%, #180000 100%);
+}
+
+#app {
+    min-height: 100svh;
+}
+
+.haunted-app {
+    background-image: linear-gradient(120deg, rgba(0, 0, 0, 0.08), transparent 40%), repeating-linear-gradient( 0deg, rgba(255, 255, 255, 0.02) 0, rgba(255, 255, 255, 0.02) 1px, transparent 1px, transparent 4px);
+}
+
+.journal-kicker {
+    margin: 0;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #f2d5b1;
+    font-size: 0.8rem;
+}
+
+.journal-title {
+    margin: 0.5rem 0 0;
+    font-family: 'Cinzel', serif;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #fff2dc;
+    font-size: clamp(1.8rem, 4.6vw, 3rem);
+}
+
+.journal-subtitle {
+    margin: 0.8rem auto 0;
+    max-width: 42rem;
+    color: #f8e8d4;
+    font-size: 0.98rem;
+    line-height: 1.5;
+}
+
+.journal-card {
+    border: 2px solid #2e2620;
+    border-radius: 6px;
+    background: linear-gradient(160deg, rgba(255, 255, 255, 0.3), transparent 45%), var(--paper);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.34), inset 0 0 0 1px rgba(255, 255, 255, 0.18);
+    padding: 1.25rem 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.journal-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(circle at 84% 12%, rgba(125, 0, 0, 0.16), transparent 34%), radial-gradient(circle at 20% 90%, rgba(0, 0, 0, 0.08), transparent 32%);
+}
+
+.card-title {
+    margin: 0;
+    border-bottom: 1px solid #3b322c;
+    padding-bottom: 0.35rem;
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+}
+
+.card-note {
+    margin: 0.75rem 0 0;
+    font-size: 0.88rem;
+    line-height: 1.45;
+}
+
+.detail-main-row {
+    margin-top: 0.5rem;
+}
+
+.ghost-grid {
+    margin: 1rem 0 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.5rem 0.65rem;
+}
+
+.ghost-grid li {
+    font-size: 0.92rem;
+}
+
+.ghost-button {
+    width: 100%;
+    border: 1px solid #3a2f28;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.25);
+    padding: 0.28rem 0.35rem;
+    font: inherit;
+    font-size: 0.9rem;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 180ms ease, transform 180ms ease;
+}
+
+.ghost-button:hover {
+    background: rgba(125, 0, 0, 0.13);
+    transform: translateY(-1px);
+}
+
+.ghost-button:focus-visible {
+    outline: 2px solid #5b0a0a;
+    outline-offset: 2px;
+}
+
+.ghost-button.is-active {
+    background: rgba(125, 0, 0, 0.2);
+    border-color: #6a1717;
+    font-weight: 700;
+}
+
+.ghost-detail {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    border: 1px solid #453931;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.ghost-detail-right {
+    margin-top: 1.1rem;
+}
+
+.evidence-list {
+    margin: 0.75rem 0 0;
+    padding-left: 1.15rem;
+    font-size: 0.9rem;
+}
+
+.evidence-list li {
+    margin: 0.28rem 0;
+}
+
+.detail-title {
+    margin: 0 0 0.45rem;
+    font-family: 'Cinzel', serif;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+}
+
+.detail-row {
+    margin: 0.35rem 0;
+    font-size: 0.82rem;
+    line-height: 1.4;
+}
+
+.detail-evidence {
+    list-style: disc;
+    margin: 0.3rem 0 0.1rem 1.2rem;
+    padding: 0;
+}
+
+.detail-evidence li {
+    margin: 0.18rem 0;
+    font-size: 0.8rem;
+}
+
+.nightmare-layout {
+    margin-top: 0.8rem;
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    gap: 0.75rem;
+    align-items: start;
+}
+
+.nightmare-mark {
+    width: 88px;
+    height: 130px;
+    border: 2px solid #3d2f29;
+    border-radius: 999px;
+    background: radial-gradient(circle at 52% 16%, rgba(0, 0, 0, 0.9) 0, rgba(0, 0, 0, 0) 38%), radial-gradient(circle at 52% 50%, rgba(0, 0, 0, 0.65) 0, rgba(0, 0, 0, 0) 52%), repeating-linear-gradient( 120deg, rgba(0, 0, 0, 0.72) 0, rgba(0, 0, 0, 0.72) 6px, transparent 6px, transparent 15px);
+}
+
+.evidence-title {
+    margin: 1rem 0 0;
+    border-top: 1px solid #3b322c;
+    padding-top: 0.55rem;
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+.evidence-grid {
+    margin-top: 0.7rem;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.5rem;
+}
+
+.evidence-item {
+    text-align: center;
+}
+
+.evidence-item p {
+    margin: 0.35rem 0 0;
+    font-size: 0.74rem;
+}
+
+.evidence-icon {
+    width: 44px;
+    height: 44px;
+    display: inline-block;
+    border: 2px solid #342b26;
+    border-radius: 8px;
+    position: relative;
+}
+
+.icon-cold::before,
+.icon-box::before,
+.icon-orb::before {
+    content: '';
+    position: absolute;
+}
+
+.icon-cold::before {
+    inset: 10px 13px;
+    border-radius: 999px;
+    border: 2px solid #201915;
+}
+
+.icon-box::before {
+    inset: 10px;
+    border: 2px solid #201915;
+}
+
+.icon-orb::before {
+    width: 10px;
+    height: 10px;
+    border-radius: 999px;
+    background: #201915;
+    top: 16px;
+    left: 16px;
+    box-shadow: -13px -7px 0 #201915, 13px 7px 0 #201915;
+}
+
+@media (max-width: 768px) {
+    .journal-card {
+        padding: 1rem 0.85rem;
+    }
+    .ghost-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .ghost-button {
+        text-align: center;
+    }
+    .nightmare-layout {
+        grid-template-columns: 1fr;
+    }
+    .nightmare-mark {
+        margin-inline: auto;
+    }
+}
