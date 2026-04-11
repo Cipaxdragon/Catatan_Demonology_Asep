@@ -1,18 +1,31 @@
 const ghostDetails = {
     Ana: {
-        type: 'Brondong Slayer',
+        type: 'Princess',
         threat: 'Extreme',
-        evidence: ['Spirit Box', 'Ghost Writing', 'EMF Level 5'],
-        signs: 'Suka bilang "anjing" dan bersifat jahat kek setan. Kalau mood jelek, level bacot naik 300% dan bikin satu lobby auto tobat.',
-
+        evidence: ['Cute', 'Humble', 'Soft Spoken'],
+        signs: 'Suka berdzikir dan bersifat baik seperti malaikat. Kalau mood jelek, dia lebih memilih mengucap istighfar dan tetap sabar, bahkan bikin satu lobby auto tentram.',
+        tips: 'Jaga jarak 2-3 meter (bukan mahram), jangan debat pas dia lagi ngegas, dan lempar duit sebagai "ritual perdamaian" biar aura rusuh turun.'
+    },
+    'Ana Anjg': {
+        type: 'Abuy Slayer aowkaokwoakokaowkaokoawkoakoakowka',
+        threat: 'Extreme',
+        evidence: ['Unfiltered Voice', 'Rage Spike', 'Toxic Callout'],
+        signs: 'Suka bilang "anjing" dan bersifat jahat kek setan. Kalau mood jelek maka level mencelakai dan julid ke orang terutama ke bayu apa apa di lampiaskan ke bayu aowkoawk , bahkan bikin satu lobby auto ketar-ketir.',
         tips: 'Jaga jarak 2-3 meter, jangan debat pas dia ngelucu ngegas, dan lempar camilan sebagai "ritual perdamaian" biar aura rusuh turun.'
     },
     Bayu: {
-        type: 'Innocent Chaos',
+        type: 'King Demon Abuy',
         threat: 'Medium',
         evidence: ['Low Battery Alert', 'Random AFK', 'Unfiltered Voice'],
         signs: 'Polos, pikiran masih bocah, diajak ngomong kadang tidak nyambung. Suka godain cewek tapi masih labil, lalu sering ghosting karena baterai habis. Kadang bela-belain main sampai lowbat 0 persen.',
         tips: 'Kalau Bayu tiba-tiba hilang, cek dulu status baterai sebelum baper. Jangan langsung tersinggung kalau omongannya nyelekit, biasanya bukan niat jahat.'
+    },
+    Keres: {
+        type: 'Angel of Death',
+        threat: 'High',
+        evidence: ['Wither', 'Handprints', 'Spirit Box'],
+        signs: 'Mengejar hunter dengan energy paling rendah, dan di mode solo biasanya baru agresif kalau energimu sudah di bawah 90 persen. Setiap kill juga membuat kecepatannya turun sedikit.',
+        tips: 'Jaga energy tetap tinggi, pakai Energy Drink atau alat pemantau energy, dan hindari jadi target paling lemah di tim.'
     },
     Aswang: {
         type: 'Predatory',
