@@ -301,20 +301,6 @@ export default function App() {
 
             <a
               className="credits-social-link"
-              href="https://github.com/cipaxdragon"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="GitHub"
-              title="GitHub"
-            >
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-2c-2.8.6-3.4-1.2-3.4-1.2-.4-1.1-1-1.4-1-1.4-.9-.5.1-.5.1-.5 1 .1 1.6 1 1.6 1 .9 1.6 2.4 1.1 2.9.9.1-.7.4-1.1.7-1.4-2.3-.2-4.8-1.1-4.8-5a3.9 3.9 0 0 1 1.1-2.8 3.7 3.7 0 0 1 .1-2.8s.9-.3 2.9 1.1a10 10 0 0 1 5.2 0c2-1.4 2.9-1.1 2.9-1.1.4.9.3 1.9.1 2.8a3.9 3.9 0 0 1 1.1 2.8c0 3.9-2.5 4.8-4.9 5 .4.4.8 1 .8 2v2.9c0 .3.2.6.7.5A10 10 0 0 0 12 2Z" />
-              </svg>
-              <span>GitHub</span>
-            </a>
-
-            <a
-              className="credits-social-link"
               href="https://discord.gg/ytGYDqvaeu"
               target="_blank"
               rel="noreferrer"
