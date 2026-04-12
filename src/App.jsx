@@ -80,7 +80,7 @@ export default function App() {
 
         <dl className="credits-grid">
           <div className="credits-row">
-            <dt>Developer</dt>
+            <dt>Frontend Website Developer (React JS)</dt>
             <dd>
               <a
                 className="credits-link"
