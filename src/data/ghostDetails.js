@@ -25,6 +25,10 @@ const ghostDetails = {
         type: 'Predatory',
         threat: 'Very High',
         evidence: ['Wither', 'EMF Level 5', 'Ghost Writing'],
+        mediaProof: [{
+            type: 'Video',
+            note: 'Aswang injak garam lalu step melambat.'
+        }],
         signs: 'Step situasional: makin cepat setiap kali berhasil membunuh. Saat kena garam, langkahnya terasa melambat dan perubahan step bisa didengar jelas.',
         tips: 'Uji pakai jalur garam untuk cek perubahan speed. Dengarkan ritme langkah untuk konfirmasi sebelum ambil keputusan.'
     },
@@ -144,6 +148,11 @@ const ghostDetails = {
         type: 'Classic',
         threat: 'Medium',
         evidence: ['Handprints', 'Ghost Writing', 'Spirit Box'],
+        mediaProof: [{
+            type: 'Photo',
+            note: 'Lentera berubah warna menjadi biru.',
+            file: '/proofs/spirit-lentera-biru.jpg'
+        }],
         signs: 'Dapat mengubah warna api lilin/lentera menjadi biru.',
         tips: 'Perhatikan perubahan warna api sebagai indikator utama saat bukti lain terasa netral.'
     },
@@ -165,6 +174,10 @@ const ghostDetails = {
         type: 'Monstrous',
         threat: 'Very High',
         evidence: ['Ghost Orbs', 'Ghost Writing', 'Laser Projector'],
+        mediaProof: [{
+            type: 'Audio',
+            note: 'Step lari Wendigo terdengar jelas saat hunt.'
+        }],
         signs: 'Tipe pelari seperti Oni. Cenderung menghindari spawn dekat lentera/api dan sering muncul di bedroom Juniper.',
         tips: 'Jaga area dengan lentera tetap aktif dan pakai rute aman karena Wendigo unggul di chase lurus.'
     },

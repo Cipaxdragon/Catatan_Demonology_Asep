@@ -1,5 +1,10 @@
 export default function GhostDetail({ ghostName, ghostInfo }) {
   const femaleFilterLabel = 'Betina'
+  const mediaTypeText = {
+    Photo: 'Photo',
+    Video: 'Video',
+    Audio: 'Audio'
+  }
 
   if (!ghostInfo) {
     return (
@@ -11,6 +16,44 @@ export default function GhostDetail({ ghostName, ghostInfo }) {
   }
 
   const hasFemaleTag = (ghostInfo.guessFilters || []).includes(femaleFilterLabel)
+
+  const renderProofMedia = (item) => {
+    if (!item.file) {
+      return null
+    }
+
+    if (item.type === 'Photo') {
+      return (
+        <a href={item.file} target="_blank" rel="noreferrer" className="proof-media-link">
+          <img src={item.file} alt={`Bukti ${ghostName}`} className="proof-media-photo" loading="lazy" />
+        </a>
+      )
+    }
+
+    if (item.type === 'Video') {
+      return (
+        <video className="proof-media-video" controls preload="metadata">
+          <source src={item.file} />
+          Browser tidak mendukung pemutar video.
+        </video>
+      )
+    }
+
+    if (item.type === 'Audio') {
+      return (
+        <audio className="proof-media-audio" controls preload="metadata">
+          <source src={item.file} />
+          Browser tidak mendukung pemutar audio.
+        </audio>
+      )
+    }
+
+    return (
+      <a href={item.file} target="_blank" rel="noreferrer" className="proof-media-link">
+        Buka file bukti
+      </a>
+    )
+  }
 
   return (
     <article className="journal-card">
@@ -52,6 +95,24 @@ export default function GhostDetail({ ghostName, ghostInfo }) {
           <li key={index}>{item}</li>
         ))}
       </ul>
+
+      {ghostInfo.mediaProof?.length ? (
+        <>
+          <h3 className="evidence-title">Rekaman Sifat Ghost</h3>
+          <ul className="evidence-list" aria-live="polite">
+            {ghostInfo.mediaProof.map((item, index) => (
+              <li key={`${item.type}-${index}`}>
+                <strong>{mediaTypeText[item.type] || item.type}:</strong> {item.note}
+                {item.file ? (
+                  <div className="proof-media-wrap">
+                    {renderProofMedia(item)}
+                  </div>
+                ) : null}
+              </li>
+            ))}
+          </ul>
+        </>
+      ) : null}
     </article>
   )
 }
