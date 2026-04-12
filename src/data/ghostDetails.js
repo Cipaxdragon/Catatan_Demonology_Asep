@@ -9,7 +9,13 @@ const ghostDetails = {
     'Ana Anjg': {
         type: 'Abuy Slayer aowkaokwoakokaowkaokoawkoakoakowka',
         threat: 'Extreme',
+        step: 'Pelari',
         evidence: ['Unfiltered Voice', 'Rage Spike', 'Toxic Callout'],
+        mediaProof: [{
+            type: 'Audio',
+            note: 'Step lari Ana Anjg terdengar cepat saat ngegas.',
+            file: '/proofs/step-lari.mp3'
+        }],
         signs: 'Suka bilang "anjing" dan bersifat jahat kek setan. Kalau mood jelek maka level mencelakai dan julid ke orang terutama ke bayu apa apa di lampiaskan ke bayu aowkoawk , bahkan bikin satu lobby auto ketar-ketir.',
         tips: 'Jaga jarak 2-3 meter, jangan debat pas dia ngelucu ngegas, dan lempar camilan sebagai "ritual perdamaian" biar aura rusuh turun.'
     },
