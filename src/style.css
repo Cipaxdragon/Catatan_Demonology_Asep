@@ -225,6 +225,7 @@ body {
 
 .proof-media-wrap {
     margin-top: 0.35rem;
+    text-align: center;
 }
 
 .proof-media-link {
@@ -235,11 +236,26 @@ body {
 
 .proof-media-photo {
     display: block;
-    margin-top: 0.35rem;
+    margin: 0.35rem auto 0;
     width: min(100%, 280px);
     border-radius: 8px;
     border: 1px solid #3b322c;
     box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+}
+
+.proof-media-video {
+    display: block;
+    margin: 0.35rem auto 0;
+    width: min(100%, 320px);
+    border-radius: 8px;
+    border: 1px solid #3b322c;
+    background: #120d0a;
+}
+
+.proof-media-audio {
+    display: block;
+    margin: 0.35rem auto 0;
+    width: min(100%, 320px);
 }
 
 .detail-title {

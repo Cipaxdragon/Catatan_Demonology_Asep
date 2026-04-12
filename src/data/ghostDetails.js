@@ -99,6 +99,11 @@ const ghostDetails = {
         type: 'Manifestor',
         threat: 'Very High',
         evidence: ['Laser Projector', 'Spirit Box', 'Freezing Temps'],
+        mediaProof: [{
+            type: 'Audio',
+            note: 'Step lari Oni terdengar jelas saat hunt.',
+            file: '/proofs/step-lari.mp3'
+        }],
         signs: 'Tipe pelari: saat hunt terlihat lari cepat, mirip Wendigo.',
         tips: 'Gunakan rute dengan banyak tikungan untuk putus jarak dan hindari adu lari lurus.'
     },
@@ -106,6 +111,11 @@ const ghostDetails = {
         type: 'Ethereal',
         threat: 'High',
         evidence: ['EMF Level 5', 'Handprints', 'Ghost Orbs'],
+        mediaProof: [{
+            type: 'Audio',
+            note: 'Step lari Phantom bisa dipantau sebagai pembanding saat chase.',
+            file: '/proofs/step-lari.mp3'
+        }],
         signs: 'Blink saat hunt lebih lambat (slow blink) dan cenderung lama muncul.',
         tips: 'Amati pola blink secara sabar saat hunt untuk membedakan dari tipe agresif cepat.'
     },
@@ -176,7 +186,8 @@ const ghostDetails = {
         evidence: ['Ghost Orbs', 'Ghost Writing', 'Laser Projector'],
         mediaProof: [{
             type: 'Audio',
-            note: 'Step lari Wendigo terdengar jelas saat hunt.'
+            note: 'Step lari Wendigo terdengar jelas saat hunt.',
+            file: '/proofs/step-lari.mp3'
         }],
         signs: 'Tipe pelari seperti Oni. Cenderung menghindari spawn dekat lentera/api dan sering muncul di bedroom Juniper.',
         tips: 'Jaga area dengan lentera tetap aktif dan pakai rute aman karena Wendigo unggul di chase lurus.'

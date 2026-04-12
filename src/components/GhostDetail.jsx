@@ -98,7 +98,7 @@ export default function GhostDetail({ ghostName, ghostInfo }) {
 
       {ghostInfo.mediaProof?.length ? (
         <>
-          <h3 className="evidence-title">Rekaman Sifat Ghost</h3>
+          <h3 className="evidence-title">Sifat Ghost</h3>
           <ul className="evidence-list" aria-live="polite">
             {ghostInfo.mediaProof.map((item, index) => (
               <li key={`${item.type}-${index}`}>
