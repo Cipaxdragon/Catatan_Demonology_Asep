@@ -9,7 +9,9 @@ const FILTER_OPTIONS = [
   'Pake Alat',
   'Cuma Dilihat',
   'Butuh Trik',
-  'Audio'
+  'Audio',
+  'Betina',
+  'Hantu Pelari'
 ]
 
 export default function App() {

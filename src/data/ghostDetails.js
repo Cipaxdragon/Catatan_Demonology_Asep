@@ -25,7 +25,7 @@ const ghostDetails = {
         type: 'Predatory',
         threat: 'Very High',
         evidence: ['Wither', 'EMF Level 5', 'Ghost Writing'],
-        signs: 'Makin cepat setiap kali berhasil membunuh. Saat kena garam, langkahnya terasa melambat dan perubahan step bisa didengar jelas.',
+        signs: 'Step situasional: makin cepat setiap kali berhasil membunuh. Saat kena garam, langkahnya terasa melambat dan perubahan step bisa didengar jelas.',
         tips: 'Uji pakai jalur garam untuk cek perubahan speed. Dengarkan ritme langkah untuk konfirmasi sebelum ambil keputusan.'
     },
     Banshee: {
@@ -46,7 +46,7 @@ const ghostDetails = {
         type: 'Hunter',
         threat: 'Very High',
         evidence: ['Wither', 'Laser Projector', 'Freezing Temps'],
-        signs: 'Bisa terlihat headless di foto. Saat line-of-sight ke pemain terjaga, step berubah dari slow ke fast.',
+        signs: 'Bisa terlihat headless di foto. Step situasional: makin cepat ketika melihat orang (line-of-sight terjaga).',
         tips: 'Sering putus line-of-sight saat kite agar akselerasi tidak menumpuk selama hunt.'
     },
     Dybbuk: {
@@ -74,7 +74,7 @@ const ghostDetails = {
         type: 'Angel of Death',
         threat: 'High',
         evidence: ['Wither', 'Handprints', 'Spirit Box'],
-        signs: 'Ngincer pemain dengan energi terendah. Speed cenderung menurun setiap hunt berikutnya.',
+        signs: 'Ngincer pemain dengan energi terendah. Step situasional: makin lambat setiap sesi hunt (contoh hunt 1 normal, hunt 2 bisa turun sekitar 50%).',
         tips: 'Lakukan tes pakai minuman energi. Kalau target tetap mengarah ke energi terendah, Keres jadi kandidat kuat.'
     },
     Leviathan: {
@@ -185,29 +185,29 @@ const ghostDetails = {
 }
 
 const ghostMeta = {
-    Aswang: { speed: '2-3/1', aggressiveness: 'BC', guessFilters: ['Butuh Pengorbanan', 'Pake Alat', 'Cuma Dilihat'] },
-    Banshee: { speed: '2', aggressiveness: 'AB', guessFilters: ['Cuma Dilihat', 'Audio'] },
-    Demon: { speed: '2', aggressiveness: 'C', guessFilters: ['Pake Alat', 'Cuma Dilihat'] },
-    Dullahan: { speed: '2-3+', aggressiveness: 'AB', guessFilters: ['Cuma Dilihat'] },
-    Dybbuk: { speed: '2', aggressiveness: 'ABC', guessFilters: ['Butuh Pengorbanan', 'Cuma Dilihat'] },
-    Entity: { speed: '2', aggressiveness: 'BC', guessFilters: ['Cuma Dilihat'] },
-    Ghoul: { speed: '2', aggressiveness: 'BC', guessFilters: ['Pake Alat'] },
-    Keres: { speed: '2-1', aggressiveness: 'BC', guessFilters: ['Pake Alat', 'Butuh Trik'] },
-    Leviathan: { speed: '2', aggressiveness: 'B', guessFilters: ['Cuma Dilihat', 'Audio'] },
-    Nightmare: { speed: '2-2.3', aggressiveness: 'ABC', guessFilters: ['Cuma Dilihat', 'Audio'] },
-    Oni: { speed: '3', aggressiveness: 'BC', guessFilters: ['Cuma Dilihat'] },
-    Phantom: { speed: '2-3', aggressiveness: 'ABC', guessFilters: ['Cuma Dilihat'] },
-    Revenant: { speed: '2-2.5', aggressiveness: 'BC', guessFilters: ['Butuh Pengorbanan', 'Cuma Dilihat'] },
-    Shadow: { speed: '2', aggressiveness: 'BC', guessFilters: ['Pake Alat'] },
-    Siren: { speed: '2', aggressiveness: 'BC', guessFilters: ['Pake Alat', 'Butuh Trik', 'Audio'] },
-    Skinwalker: { speed: '2', aggressiveness: 'BC', guessFilters: ['Cuma Dilihat'] },
-    Specter: { speed: '2', aggressiveness: 'B', guessFilters: ['Cuma Dilihat', 'Pake Alat'] },
-    Spirit: { speed: '2-2.1', aggressiveness: 'B', guessFilters: ['Cuma Dilihat'] },
-    Umbra: { speed: '2?', aggressiveness: 'BC', guessFilters: ['Cuma Dilihat', 'Audio'] },
-    Vex: { speed: '2', aggressiveness: 'B', guessFilters: ['Cuma Dilihat', 'Pake Alat'] },
-    Wendigo: { speed: '2-3+', aggressiveness: 'B', guessFilters: ['Cuma Dilihat'] },
-    Wisp: { speed: '2', aggressiveness: 'ABC', guessFilters: ['Pake Alat', 'Cuma Dilihat'] },
-    Wraith: { speed: '2-2.3', aggressiveness: 'B', guessFilters: ['Pake Alat', 'Cuma Dilihat'] }
+    Aswang: { step: 'Situasional', aggressiveness: 'Normal - Di Atas Normal', guessFilters: ['Butuh Pengorbanan', 'Pake Alat', 'Cuma Dilihat', 'Hantu Pelari'] },
+    Banshee: { step: 'Normal', aggressiveness: 'Di Bawah Normal - Normal', guessFilters: ['Cuma Dilihat', 'Audio', 'Betina'] },
+    Demon: { step: 'Normal', aggressiveness: 'Di Atas Normal', guessFilters: ['Pake Alat', 'Cuma Dilihat'] },
+    Dullahan: { step: 'Situasional', aggressiveness: 'Di Bawah Normal - Normal', guessFilters: ['Cuma Dilihat', 'Hantu Pelari'] },
+    Dybbuk: { step: 'Normal', aggressiveness: 'Di Bawah Normal - Normal - Di Atas Normal', guessFilters: ['Butuh Pengorbanan', 'Cuma Dilihat'] },
+    Entity: { step: 'Normal', aggressiveness: 'Normal - Di Atas Normal', guessFilters: ['Cuma Dilihat'] },
+    Ghoul: { step: 'Normal', aggressiveness: 'Normal - Di Atas Normal', guessFilters: ['Pake Alat'] },
+    Keres: { step: 'Situasional', aggressiveness: 'Normal - Di Atas Normal', guessFilters: ['Pake Alat', 'Butuh Trik', 'Betina'] },
+    Leviathan: { step: 'Normal', aggressiveness: 'Normal', guessFilters: ['Cuma Dilihat', 'Audio'] },
+    Nightmare: { step: 'Normal', aggressiveness: 'Di Bawah Normal - Normal - Di Atas Normal', guessFilters: ['Cuma Dilihat', 'Audio'] },
+    Oni: { step: 'Pelari', aggressiveness: 'Normal - Di Atas Normal', guessFilters: ['Cuma Dilihat', 'Hantu Pelari'] },
+    Phantom: { step: 'Pelari', aggressiveness: 'Di Bawah Normal - Normal - Di Atas Normal', guessFilters: ['Cuma Dilihat', 'Hantu Pelari'] },
+    Revenant: { step: 'Normal', aggressiveness: 'Normal - Di Atas Normal', guessFilters: ['Butuh Pengorbanan', 'Cuma Dilihat'] },
+    Shadow: { step: 'Normal', aggressiveness: 'Normal - Di Atas Normal', guessFilters: ['Pake Alat'] },
+    Siren: { step: 'Normal', aggressiveness: 'Normal - Di Atas Normal', guessFilters: ['Pake Alat', 'Butuh Trik', 'Audio', 'Betina'] },
+    Skinwalker: { step: 'Normal', aggressiveness: 'Normal - Di Atas Normal', guessFilters: ['Cuma Dilihat'] },
+    Specter: { step: 'Normal', aggressiveness: 'Normal', guessFilters: ['Cuma Dilihat', 'Pake Alat'] },
+    Spirit: { step: 'Normal', aggressiveness: 'Normal', guessFilters: ['Cuma Dilihat'] },
+    Umbra: { step: 'Normal', aggressiveness: 'Normal - Di Atas Normal', guessFilters: ['Cuma Dilihat', 'Audio'] },
+    Vex: { step: 'Normal', aggressiveness: 'Normal', guessFilters: ['Cuma Dilihat', 'Pake Alat'] },
+    Wendigo: { step: 'Pelari', aggressiveness: 'Normal', guessFilters: ['Cuma Dilihat', 'Hantu Pelari'] },
+    Wisp: { step: 'Normal', aggressiveness: 'Di Bawah Normal - Normal - Di Atas Normal', guessFilters: ['Pake Alat', 'Cuma Dilihat'] },
+    Wraith: { step: 'Normal', aggressiveness: 'Normal', guessFilters: ['Pake Alat', 'Cuma Dilihat'] }
 }
 
 Object.entries(ghostMeta).forEach(([name, meta]) => {

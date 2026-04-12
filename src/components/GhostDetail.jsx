@@ -1,4 +1,6 @@
 export default function GhostDetail({ ghostName, ghostInfo }) {
+  const femaleFilterLabel = 'Betina'
+
   if (!ghostInfo) {
     return (
       <article className="journal-card">
@@ -8,9 +10,14 @@ export default function GhostDetail({ ghostName, ghostInfo }) {
     )
   }
 
+  const hasFemaleTag = (ghostInfo.guessFilters || []).includes(femaleFilterLabel)
+
   return (
     <article className="journal-card">
-      <h2 className="card-title">{ghostName}</h2>
+      <div className="card-title-row">
+        <h2 className="card-title card-title-inline">{ghostName}</h2>
+        {hasFemaleTag ? <span className="ghost-tag female-tag">Female</span> : null}
+      </div>
       <div className="nightmare-layout">
         <div className="nightmare-mark" aria-hidden="true"></div>
         <div>
@@ -21,10 +28,10 @@ export default function GhostDetail({ ghostName, ghostInfo }) {
             <strong>Threat:</strong> <span>{ghostInfo.threat}</span>
           </p>
           <p className="card-note detail-main-row">
-            <strong>Speed:</strong> <span>{ghostInfo.speed || '-'}</span>
+            <strong>Step:</strong> <span>{ghostInfo.step || '-'}</span>
           </p>
           <p className="card-note detail-main-row">
-            <strong>Aggressiveness:</strong> <span>{ghostInfo.aggressiveness || '-'}</span>
+            <strong>Keganasan:</strong> <span>{ghostInfo.aggressiveness || '-'}</span>
           </p>
           <p className="card-note detail-main-row">
             <strong>Filter Tebakan:</strong>{' '}
