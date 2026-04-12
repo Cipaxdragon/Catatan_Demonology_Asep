@@ -2,6 +2,7 @@ const ghostDetails = {
     Ana: {
         type: 'Princess',
         threat: 'Extreme',
+        hidden: true,
         evidence: ['Cute', 'Humble', 'Soft Spoken'],
         signs: 'Suka berdzikir dan bersifat baik seperti malaikat. Kalau mood jelek, dia lebih memilih mengucap istighfar dan tetap sabar, bahkan bikin satu lobby auto tentram.',
         tips: 'Jaga jarak 2-3 meter (bukan mahram), jangan debat pas dia lagi ngegas, dan lempar duit sebagai "ritual perdamaian" biar aura rusuh turun.'
@@ -9,6 +10,7 @@ const ghostDetails = {
     'Ana Anjg': {
         type: 'Abuy Slayer aowkaokwoakokaowkaokoawkoakoakowka',
         threat: 'Extreme',
+        hidden: true,
         step: 'Pelari',
         evidence: ['Unfiltered Voice', 'Rage Spike', 'Toxic Callout'],
         mediaProof: [{
@@ -22,6 +24,7 @@ const ghostDetails = {
     Bayu: {
         type: 'King Demon Abuy',
         threat: 'Medium',
+        hidden: true,
         evidence: ['Low Battery Alert', 'Random AFK', 'Unfiltered Voice'],
         signs: 'Polos, pikiran masih bocah, diajak ngomong kadang tidak nyambung. Suka godain cewek tapi masih labil, lalu sering ghosting karena baterai habis. Kadang bela-belain main sampai lowbat 0 persen.',
         tips: 'Kalau Bayu tiba-tiba hilang, cek dulu status baterai sebelum baper. Jangan langsung tersinggung kalau omongannya nyelekit, biasanya bukan niat jahat.'
@@ -216,7 +219,7 @@ const ghostDetails = {
 
 const ghostMeta = {
     Aswang: { step: 'Situasional', aggressiveness: 'Normal - Di Atas Normal', guessFilters: ['Butuh Pengorbanan', 'Pake Alat', 'Cuma Dilihat', 'Hantu Pelari'] },
-    Banshee: { step: 'Normal', aggressiveness: 'Di Bawah Normal - Normal', guessFilters: ['Cuma Dilihat', 'Audio', 'Betina'] },
+    Banshee: { step: 'Normal', aggressiveness: 'Di Bawah Normal - Normal', guessFilters: ['Cuma Dilihat', 'Audio'] },
     Demon: { step: 'Normal', aggressiveness: 'Di Atas Normal', guessFilters: ['Pake Alat', 'Cuma Dilihat'] },
     Dullahan: { step: 'Situasional', aggressiveness: 'Di Bawah Normal - Normal', guessFilters: ['Cuma Dilihat', 'Hantu Pelari'] },
     Dybbuk: { step: 'Normal', aggressiveness: 'Di Bawah Normal - Normal - Di Atas Normal', guessFilters: ['Butuh Pengorbanan', 'Cuma Dilihat', 'Hantu Pemalu'] },

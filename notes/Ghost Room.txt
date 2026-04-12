@@ -9,10 +9,10 @@ JUNIPER
     Bathroom : oni, phantom, entity, shadaow,Skinwalker
     Office : banshe, spirit, specter
     Laudry : ghoul, nigmare, entity, oni
-    Living : vex, keres, dullahan, aswang, siren
+    Living Room : vex, keres, dullahan, aswang, siren
     Pantry : umbra, revenant, leviathan,Siren
     Bed : entity, demon, wraith, wendigo
-    Foyerl : wisp, spirit, keres
+    Foyer : wisp, spirit, keres
 
 
 Fenway:
