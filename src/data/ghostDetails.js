@@ -25,156 +25,195 @@ const ghostDetails = {
         type: 'Predatory',
         threat: 'Very High',
         evidence: ['Wither', 'EMF Level 5', 'Ghost Writing'],
-        signs: 'Kecepatan Aswang meningkat setiap kali berhasil membunuh target.',
-        tips: 'Taburkan salt di jalur lintasan untuk memperlambat geraknya saat dikejar.'
+        signs: 'Makin cepat setiap kali berhasil membunuh. Saat kena garam, langkahnya terasa melambat dan perubahan step bisa didengar jelas.',
+        tips: 'Uji pakai jalur garam untuk cek perubahan speed. Dengarkan ritme langkah untuk konfirmasi sebelum ambil keputusan.'
     },
     Banshee: {
         type: 'Harbinger',
         threat: 'High',
         evidence: ['Ghost Orbs', 'Handprints', 'Freezing Temps'],
-        signs: 'Lebih sering memecahkan kaca dan kadang memakai wail khas ketika hunt.',
-        tips: 'Prioritaskan audio cue dan cek area pecahan kaca untuk melacak pola aktivitas.'
+        signs: 'Suara hunt beda dari tipe lain, cenderung lebih mendem dan khas saat mendekat.',
+        tips: 'Fokus ke audio cue selama hunt. Kalau pola suaranya konsisten beda, Banshee jadi kandidat kuat.'
     },
     Demon: {
         type: 'Aggressive',
         threat: 'Extreme',
         evidence: ['EMF Level 5', 'Handprints', 'Freezing Temps'],
-        signs: 'Demon cenderung memburu lebih sering dibanding tipe lain.',
-        tips: 'Bawa cross/crucifix lebih awal karena efeknya lebih kuat terhadap Demon.'
+        signs: 'Crucifix/salib terlihat melayang saat kebakar ketika hunt terjadi.',
+        tips: 'Pastikan itu momen hunt, bukan event biasa. Tes crucifix lebih awal untuk validasi cepat.'
     },
     Dullahan: {
         type: 'Hunter',
         threat: 'Very High',
         evidence: ['Wither', 'Laser Projector', 'Freezing Temps'],
-        signs: 'Foto bisa menampakkan wujud tanpa kepala, dan kecepatannya naik jika lama melihat target.',
-        tips: 'Putus line-of-sight secepat mungkin agar akselerasinya tidak terus meningkat.'
+        signs: 'Bisa terlihat headless di foto. Saat line-of-sight ke pemain terjaga, step berubah dari slow ke fast.',
+        tips: 'Sering putus line-of-sight saat kite agar akselerasi tidak menumpuk selama hunt.'
     },
     Dybbuk: {
         type: 'Possessor',
         threat: 'High',
         evidence: ['Wither', 'Handprints', 'Freezing Temps'],
-        signs: 'Bisa berinteraksi dengan mayat dan melempar corpse sebagai ciri khas.',
-        tips: 'Gunakan Music Box secara taktis karena Dybbuk sempat terkena stun saat musik pertama kali diputar.'
+        signs: 'Ciri paling jelas: bisa melempar mayat/corpse.',
+        tips: 'Kalau ada corpse throw saat kondisi memungkinkan, prioritaskan Dybbuk sebagai tebakan utama.'
     },
     Entity: {
         type: 'Anomalous',
         threat: 'High',
         evidence: ['Spirit Box', 'Handprints', 'Laser Projector'],
-        signs: 'Memiliki kemampuan teleport dan relatif jarang melempar benda.',
-        tips: 'Pantau perpindahan posisi mendadak dengan sensor berlapis untuk konfirmasi teleport.'
+        signs: 'Punya kemampuan teleportasi, termasuk perpindahan yang terlihat seperti bayangan.',
+        tips: 'Pantau perubahan posisi mendadak dengan sensor dan lidar agar teleport lebih mudah dibaca.'
     },
     Ghoul: {
         type: 'Troublemaker',
         threat: 'High',
         evidence: ['Spirit Box', 'Freezing Temps', 'Ghost Orbs'],
-        signs: 'Bisa ngamuk saat mendengar percakapan dan tidak dapat mematikan elektronik.',
-        tips: 'Kurangi voice chat dekat area aktif, lalu verifikasi elektronik tetap hidup sebagai indikator.'
+        signs: 'Tidak bisa mematikan elektronik.',
+        tips: 'Cek dengan kombinasi Spirit Box, senter UV, dan senter biasa. Jika elektronik tetap aktif, indikasi Ghoul menguat.'
     },
     Keres: {
         type: 'Angel of Death',
         threat: 'High',
         evidence: ['Wither', 'Handprints', 'Spirit Box'],
-        signs: 'Mengejar hunter dengan energy paling rendah, dan di mode solo biasanya baru agresif kalau energimu sudah di bawah 90 persen. Setiap kill juga membuat kecepatannya turun sedikit.',
-        tips: 'Jaga energy tetap tinggi, pakai Energy Drink atau alat pemantau energy, dan hindari jadi target paling lemah di tim.'
+        signs: 'Ngincer pemain dengan energi terendah. Speed cenderung menurun setiap hunt berikutnya.',
+        tips: 'Lakukan tes pakai minuman energi. Kalau target tetap mengarah ke energi terendah, Keres jadi kandidat kuat.'
     },
     Leviathan: {
         type: 'Chaotic',
         threat: 'Very High',
         evidence: ['Ghost Orbs', 'Handprints', 'Ghost Writing'],
-        signs: 'Sering melempar banyak objek sekaligus dan mampu mematikan lampu secara pasif.',
-        tips: 'Pisahkan tim untuk pantau object-throw burst dan siapkan pencahayaan cadangan.'
+        signs: 'Bisa melempar dua objek sekaligus. Lemparannya sering terdengar overlap/numpuk dan khas.',
+        tips: 'Pantau area banyak objek. Kalau muncul double-throw berulang, Leviathan makin mungkin.'
     },
     Nightmare: {
         type: 'Hallucinatory',
         threat: 'High',
         evidence: ['EMF Level 5', 'Spirit Box', 'Ghost Orbs'],
-        signs: 'Dapat memicu halusinasi dan cenderung hunt lebih sering di area gelap.',
-        tips: 'Jaga ruangan tetap terang saat investigasi untuk menekan agresi hunt.'
+        signs: 'Memicu halusinasi audio dan lebih agresif berburu di area gelap.',
+        tips: 'Kurangi area gelap aktif dan waspadai audio aneh yang tidak sinkron dengan posisi ghost.'
     },
     Oni: {
         type: 'Manifestor',
         threat: 'Very High',
         evidence: ['Laser Projector', 'Spirit Box', 'Freezing Temps'],
-        signs: 'Manifestasi lebih sering dan dapat sprint saat fase hunt.',
-        tips: 'Gunakan ruang dengan banyak sudut untuk putus jarak ketika Oni mulai sprint.'
+        signs: 'Tipe pelari: saat hunt terlihat lari cepat, mirip Wendigo.',
+        tips: 'Gunakan rute dengan banyak tikungan untuk putus jarak dan hindari adu lari lurus.'
     },
     Phantom: {
         type: 'Ethereal',
         threat: 'High',
         evidence: ['EMF Level 5', 'Handprints', 'Ghost Orbs'],
-        signs: 'Blink saat hunt lebih lambat dan cenderung kurang suka mengejar kelompok besar.',
-        tips: 'Mainkan posisi tim berdekatan saat uji hunt untuk melihat pola target Phantom.'
+        signs: 'Blink saat hunt lebih lambat (slow blink) dan cenderung lama muncul.',
+        tips: 'Amati pola blink secara sabar saat hunt untuk membedakan dari tipe agresif cepat.'
     },
     Revenant: {
         type: 'Vengeful',
         threat: 'Extreme',
         evidence: ['Ghost Writing', 'EMF Level 5', 'Freezing Temps'],
-        signs: 'Cooldown hunt rendah; setelah membunuh seseorang biasanya masuk fase istirahat.',
-        tips: 'Fokus survive tiap hunt pertama karena chain hunt bisa terjadi lebih cepat.'
+        signs: 'Hunt cenderung berhenti saat sudah berhasil membunuh target.',
+        tips: 'Kalau hunt langsung berakhir setelah kill, naikkan prioritas tebakan ke Revenant.'
     },
     Shadow: {
         type: 'Shy',
         threat: 'Medium',
         evidence: ['EMF Level 5', 'Ghost Writing', 'Laser Projector'],
-        signs: 'Jarang mengubah suhu dan lebih pasif di ruangan terang.',
-        tips: 'Tingkatkan pencahayaan area favoritnya untuk mengurangi frekuensi aktivitas.'
+        signs: 'Penurunan suhu kecil dan lambat, sekitar 0.05 per detik berdasarkan observasi.',
+        tips: 'Dekati area aktif sambil cek termometer berkala untuk menangkap penurunan suhu halus.'
     },
     Siren: {
         type: 'Luring',
         threat: 'High',
         evidence: ['Wither', 'Spirit Box', 'EMF Level 5'],
-        signs: 'Memperlambat pemain yang terlihat saat hunt dan respons Spirit Box selalu suara wanita.',
-        tips: 'Gunakan Spirit Box sebagai cek utama, lalu hindari duel garis pandang saat hunt.'
+        signs: 'Respons Spirit Box cenderung suara perempuan dan dapat memberi efek slow saat mengejar.',
+        tips: 'Uji dengan skenario kejar-kejaran. Jika kena slow konsisten saat dikejar, kemungkinan Siren tinggi.'
     },
     Skinwalker: {
         type: 'Mimic',
         threat: 'Very High',
         evidence: ['Freezing Temps', 'Ghost Writing', 'Spirit Box'],
-        signs: 'Bisa meniru kemampuan ghost lain serta memalsukan bukti Ghost Orbs.',
-        tips: 'Jangan simpulkan dari satu gejala; cari inkonsistensi bukti untuk mengidentifikasi mimic.'
+        signs: 'Dapat memunculkan orb palsu dan kadang meniru perilaku Vex/Banshee.',
+        tips: 'Jangan simpulkan dari satu gejala. Cari pola perilaku yang berubah-ubah untuk konfirmasi mimic.'
     },
     Specter: {
         type: 'Territorial',
         threat: 'High',
         evidence: ['EMF Level 5', 'Freezing Temps', 'Laser Projector'],
-        signs: 'Sangat terikat pada favorite room, sering lempar benda, dan hampir tidak roaming di luar hunt.',
-        tips: 'Lock area investigasi di satu ruangan inti karena Specter biasanya menetap di sana.'
+        signs: 'Suka lempar barang dan cenderung tidak roaming kecuali saat hunt.',
+        tips: 'Pantau pakai lidar secara berkala. Jika tetap di area inti tapi aktif lempar, Specter makin kuat.'
     },
     Spirit: {
         type: 'Classic',
         threat: 'Medium',
         evidence: ['Handprints', 'Ghost Writing', 'Spirit Box'],
-        signs: 'Tidak punya kekuatan dominan, namun bisa mengubah warna api lilin.',
-        tips: 'Jika pola bukti terasa netral dan lilin berubah warna, pertimbangkan Spirit.'
+        signs: 'Dapat mengubah warna api lilin/lentera menjadi biru.',
+        tips: 'Perhatikan perubahan warna api sebagai indikator utama saat bukti lain terasa netral.'
     },
     Umbra: {
         type: 'Shadowy',
         threat: 'High',
         evidence: ['Ghost Orbs', 'Laser Projector', 'Handprints'],
-        signs: 'Tidak menghasilkan suara langkah kaki dan bergerak lebih lambat di ruangan terang.',
-        tips: 'Nyalakan lampu di area lintasan untuk menurunkan tekanan chase dari Umbra.'
+        signs: 'Tidak ada suara jejak kaki saat bergerak.',
+        tips: 'Gunakan audio sebagai alat cek utama; minim jejak langkah adalah tanda kuat Umbra.'
+    },
+    Vex: {
+        type: 'Phase Walker',
+        threat: 'Very High',
+        evidence: ['Unknown', 'Unknown', 'Unknown'],
+        signs: 'Sulit terdeteksi lidar dan dapat menembus tembok.',
+        tips: 'Jika perilaku tembus objek terlihat jelas dan lidar sering gagal menangkap posisi, pertimbangkan Vex.'
     },
     Wendigo: {
         type: 'Monstrous',
         threat: 'Very High',
         evidence: ['Ghost Orbs', 'Ghost Writing', 'Laser Projector'],
-        signs: 'Tidak memulai hunt di dekat api menyala dan makin cepat saat average sanity turun.',
-        tips: 'Pertahankan flame aktif di titik rawan dan jaga sanity tim agar tidak drop cepat.'
+        signs: 'Tipe pelari seperti Oni. Cenderung menghindari spawn dekat lentera/api dan sering muncul di bedroom Juniper.',
+        tips: 'Jaga area dengan lentera tetap aktif dan pakai rute aman karena Wendigo unggul di chase lurus.'
     },
-    'The Wisp': {
+    Wisp: {
         type: 'Flame-bound',
         threat: 'High',
         evidence: ['Wither', 'Laser Projector', 'Ghost Orbs'],
-        signs: 'Dapat menyalakan lilin sendiri dan hanya bisa memulai hunt dari favorite room.',
-        tips: 'Pantau ruangan favorit dengan ketat; jika hunt selalu berasal dari titik itu, Wisp makin kuat indikasinya.'
+        signs: 'Memiliki interaksi kuat terhadap api dan dapat terlihat seperti "tembus api" di situasi tertentu.',
+        tips: 'Gunakan oil/lentera sebagai alat bantu uji perilaku saat identifikasi no-evidence.'
     },
     Wraith: {
         type: 'Malevolent',
         threat: 'Very High',
         evidence: ['EMF Level 5', 'Spirit Box', 'Laser Projector'],
-        signs: 'Menguras energi tim lebih cepat dan enggan mengganggu garis salt.',
-        tips: 'Gunakan salt line sebagai tes perilaku; minim gangguan salt mengarah kuat ke Wraith.'
+        signs: 'Tidak menginjak garam.',
+        tips: 'Pasang jalur garam di rute lintasan. Jika konsisten tidak terinjak, Wraith jadi kandidat utama.'
     }
 }
+
+const ghostMeta = {
+    Aswang: { speed: '2-3/1', aggressiveness: 'BC', guessFilters: ['Butuh Pengorbanan', 'Pake Alat', 'Cuma Dilihat'] },
+    Banshee: { speed: '2', aggressiveness: 'AB', guessFilters: ['Cuma Dilihat', 'Audio'] },
+    Demon: { speed: '2', aggressiveness: 'C', guessFilters: ['Pake Alat', 'Cuma Dilihat'] },
+    Dullahan: { speed: '2-3+', aggressiveness: 'AB', guessFilters: ['Cuma Dilihat'] },
+    Dybbuk: { speed: '2', aggressiveness: 'ABC', guessFilters: ['Butuh Pengorbanan', 'Cuma Dilihat'] },
+    Entity: { speed: '2', aggressiveness: 'BC', guessFilters: ['Cuma Dilihat'] },
+    Ghoul: { speed: '2', aggressiveness: 'BC', guessFilters: ['Pake Alat'] },
+    Keres: { speed: '2-1', aggressiveness: 'BC', guessFilters: ['Pake Alat', 'Butuh Trik'] },
+    Leviathan: { speed: '2', aggressiveness: 'B', guessFilters: ['Cuma Dilihat', 'Audio'] },
+    Nightmare: { speed: '2-2.3', aggressiveness: 'ABC', guessFilters: ['Cuma Dilihat', 'Audio'] },
+    Oni: { speed: '3', aggressiveness: 'BC', guessFilters: ['Cuma Dilihat'] },
+    Phantom: { speed: '2-3', aggressiveness: 'ABC', guessFilters: ['Cuma Dilihat'] },
+    Revenant: { speed: '2-2.5', aggressiveness: 'BC', guessFilters: ['Butuh Pengorbanan', 'Cuma Dilihat'] },
+    Shadow: { speed: '2', aggressiveness: 'BC', guessFilters: ['Pake Alat'] },
+    Siren: { speed: '2', aggressiveness: 'BC', guessFilters: ['Pake Alat', 'Butuh Trik', 'Audio'] },
+    Skinwalker: { speed: '2', aggressiveness: 'BC', guessFilters: ['Cuma Dilihat'] },
+    Specter: { speed: '2', aggressiveness: 'B', guessFilters: ['Cuma Dilihat', 'Pake Alat'] },
+    Spirit: { speed: '2-2.1', aggressiveness: 'B', guessFilters: ['Cuma Dilihat'] },
+    Umbra: { speed: '2?', aggressiveness: 'BC', guessFilters: ['Cuma Dilihat', 'Audio'] },
+    Vex: { speed: '2', aggressiveness: 'B', guessFilters: ['Cuma Dilihat', 'Pake Alat'] },
+    Wendigo: { speed: '2-3+', aggressiveness: 'B', guessFilters: ['Cuma Dilihat'] },
+    Wisp: { speed: '2', aggressiveness: 'ABC', guessFilters: ['Pake Alat', 'Cuma Dilihat'] },
+    Wraith: { speed: '2-2.3', aggressiveness: 'B', guessFilters: ['Pake Alat', 'Cuma Dilihat'] }
+}
+
+Object.entries(ghostMeta).forEach(([name, meta]) => {
+    if (ghostDetails[name]) {
+        ghostDetails[name] = {...ghostDetails[name], ...meta }
+    }
+})
 
 export default ghostDetails

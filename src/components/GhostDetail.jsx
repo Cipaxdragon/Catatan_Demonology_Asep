@@ -21,6 +21,16 @@ export default function GhostDetail({ ghostName, ghostInfo }) {
             <strong>Threat:</strong> <span>{ghostInfo.threat}</span>
           </p>
           <p className="card-note detail-main-row">
+            <strong>Speed:</strong> <span>{ghostInfo.speed || '-'}</span>
+          </p>
+          <p className="card-note detail-main-row">
+            <strong>Aggressiveness:</strong> <span>{ghostInfo.aggressiveness || '-'}</span>
+          </p>
+          <p className="card-note detail-main-row">
+            <strong>Filter Tebakan:</strong>{' '}
+            <span>{(ghostInfo.guessFilters || []).join(', ') || '-'}</span>
+          </p>
+          <p className="card-note detail-main-row">
             <strong>Signs:</strong> <span>{ghostInfo.signs}</span>
           </p>
           <p className="card-note detail-main-row">

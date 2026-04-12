@@ -92,6 +92,38 @@ body {
     line-height: 1.45;
 }
 
+.filter-wrap {
+    margin-top: 0.75rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+}
+
+.filter-chip {
+    border: 1px solid #3a2f28;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.32);
+    padding: 0.22rem 0.62rem;
+    font: inherit;
+    font-size: 0.75rem;
+    cursor: pointer;
+}
+
+.filter-chip:hover {
+    background: rgba(125, 0, 0, 0.13);
+}
+
+.filter-chip.is-active {
+    background: rgba(125, 0, 0, 0.25);
+    border-color: #6a1717;
+    font-weight: 700;
+}
+
+.filter-result-note {
+    margin-top: 0.55rem;
+    font-size: 0.78rem;
+}
+
 .detail-main-row {
     margin-top: 0.5rem;
 }
@@ -265,6 +297,103 @@ body {
     box-shadow: -13px -7px 0 #201915, 13px 7px 0 #201915;
 }
 
+.credits-footer {
+    margin-bottom: 0.5rem;
+    border: 2px solid #3a2c26;
+    border-radius: 8px;
+    background: linear-gradient(140deg, rgba(255, 242, 220, 0.1), rgba(125, 0, 0, 0.23));
+    padding: 0.9rem 1rem;
+    color: #f8e8d4;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.24);
+}
+
+.credits-title {
+    margin: 0;
+    font-family: 'Cinzel', serif;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    border-bottom: 1px solid rgba(242, 213, 177, 0.35);
+    padding-bottom: 0.4rem;
+}
+
+.credits-react-line {
+    margin-top: 0.6rem;
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+}
+
+.credits-react-text {
+    margin: 0;
+    line-height: 1.45;
+    font-size: 0.9rem;
+}
+
+.credits-grid {
+    margin: 0.75rem 0 0;
+    padding: 0;
+    display: grid;
+    gap: 0.5rem;
+}
+
+.credits-row {
+    display: grid;
+    grid-template-columns: 170px 1fr;
+    gap: 0.6rem;
+    align-items: start;
+    padding: 0.4rem 0.5rem;
+    border: 1px solid rgba(242, 213, 177, 0.22);
+    border-radius: 6px;
+    background: rgba(0, 0, 0, 0.12);
+}
+
+.credits-row dt,
+.credits-row dd {
+    margin: 0;
+    font-size: 0.88rem;
+    line-height: 1.45;
+}
+
+.credits-row dt {
+    color: #f2d5b1;
+    font-weight: 700;
+}
+
+.credits-link {
+    color: #ffe2b8;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.credits-link:hover {
+    color: #ffffff;
+}
+
+.react-logo-mark {
+    width: 1.75rem;
+    height: 1.75rem;
+    flex: 0 0 auto;
+    display: inline-flex;
+}
+
+.react-logo-mark svg {
+    width: 100%;
+    height: 100%;
+}
+
+.react-logo-mark ellipse,
+.react-logo-mark circle {
+    stroke: #f2d5b1;
+    fill: #f2d5b1;
+    stroke-width: 3;
+}
+
+.react-logo-mark circle {
+    fill: #7d0000;
+    stroke: #f2d5b1;
+}
+
 @media (max-width: 768px) {
     .journal-card {
         padding: 1rem 0.85rem;
@@ -280,5 +409,12 @@ body {
     }
     .nightmare-mark {
         margin-inline: auto;
+    }
+    .credits-react-line {
+        align-items: flex-start;
+    }
+    .credits-row {
+        grid-template-columns: 1fr;
+        gap: 0.15rem;
     }
 }
