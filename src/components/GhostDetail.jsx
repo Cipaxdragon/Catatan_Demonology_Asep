@@ -1,3 +1,120 @@
+import { useEffect, useRef, useState } from 'react'
+
+function formatAudioTime(totalSeconds) {
+  if (!Number.isFinite(totalSeconds) || totalSeconds < 0) {
+    return '0:00'
+  }
+
+  const minutes = Math.floor(totalSeconds / 60)
+  const seconds = Math.floor(totalSeconds % 60)
+  return `${minutes}:${String(seconds).padStart(2, '0')}`
+}
+
+function ProofAudioPlayer({ src }) {
+  const audioRef = useRef(null)
+  const [isPlaying, setIsPlaying] = useState(false)
+  const [currentTime, setCurrentTime] = useState(0)
+  const [duration, setDuration] = useState(0)
+
+  useEffect(() => {
+    const audio = audioRef.current
+
+    if (!audio) {
+      return undefined
+    }
+
+    const handleLoadedMetadata = () => {
+      setDuration(audio.duration || 0)
+    }
+
+    const handleTimeUpdate = () => {
+      setCurrentTime(audio.currentTime || 0)
+    }
+
+    const handleEnded = () => {
+      setIsPlaying(false)
+    }
+
+    audio.addEventListener('loadedmetadata', handleLoadedMetadata)
+    audio.addEventListener('timeupdate', handleTimeUpdate)
+    audio.addEventListener('ended', handleEnded)
+
+    return () => {
+      audio.removeEventListener('loadedmetadata', handleLoadedMetadata)
+      audio.removeEventListener('timeupdate', handleTimeUpdate)
+      audio.removeEventListener('ended', handleEnded)
+    }
+  }, [])
+
+  const togglePlay = async () => {
+    const audio = audioRef.current
+
+    if (!audio) {
+      return
+    }
+
+    if (audio.paused) {
+      try {
+        await audio.play()
+        setIsPlaying(true)
+      } catch {
+        setIsPlaying(false)
+      }
+    } else {
+      audio.pause()
+      setIsPlaying(false)
+    }
+  }
+
+  const handleSeek = (event) => {
+    const nextTime = Number(event.target.value)
+    const audio = audioRef.current
+
+    if (!audio || !Number.isFinite(nextTime)) {
+      return
+    }
+
+    audio.currentTime = nextTime
+    setCurrentTime(nextTime)
+  }
+
+  return (
+    <div className="proof-audio-player">
+      <audio ref={audioRef} preload="metadata">
+        <source src={src} />
+        Browser tidak mendukung pemutar audio.
+      </audio>
+
+      <button
+        type="button"
+        className="proof-audio-play"
+        onClick={togglePlay}
+        aria-label={isPlaying ? 'Pause audio' : 'Play audio'}
+      >
+        {isPlaying ? 'Pause' : 'Play'}
+      </button>
+
+      <div className="proof-audio-timeline-wrap">
+        <input
+          type="range"
+          className="proof-audio-timeline"
+          min="0"
+          max={duration || 0}
+          step="0.1"
+          value={Math.min(currentTime, duration || 0)}
+          onChange={handleSeek}
+          disabled={!duration}
+          aria-label="Progress audio"
+        />
+        <div className="proof-audio-time">
+          <span>{formatAudioTime(currentTime)}</span>
+          <span>{formatAudioTime(duration)}</span>
+        </div>
+      </div>
+    </div>
+  )
+}
+
 export default function GhostDetail({ ghostName, ghostInfo }) {
   const femaleFilterLabel = 'Betina'
   const mediaTypeText = {
@@ -41,10 +158,7 @@ export default function GhostDetail({ ghostName, ghostInfo }) {
 
     if (item.type === 'Audio') {
       return (
-        <audio className="proof-media-audio" controls preload="metadata">
-          <source src={item.file} />
-          Browser tidak mendukung pemutar audio.
-        </audio>
+        <ProofAudioPlayer src={item.file} />
       )
     }
 

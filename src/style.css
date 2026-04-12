@@ -288,6 +288,63 @@ body {
     width: min(100%, 320px);
 }
 
+.proof-audio-player {
+    margin: 0.35rem auto 0;
+    width: min(100%, 340px);
+    border: 1px solid #3b322c;
+    border-radius: 12px;
+    background: linear-gradient(180deg, #221914 0%, #15100c 100%);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.28);
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.65rem;
+    align-items: center;
+    padding: 0.65rem 0.75rem;
+}
+
+.proof-audio-play {
+    border: 1px solid #a7724c;
+    border-radius: 8px;
+    background: linear-gradient(180deg, #cb946b 0%, #9e653d 100%);
+    color: #1a120d;
+    font-size: 0.74rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.42rem 0.7rem;
+    cursor: pointer;
+}
+
+.proof-audio-play:hover {
+    filter: brightness(1.06);
+}
+
+.proof-audio-play:active {
+    transform: translateY(1px);
+}
+
+.proof-audio-timeline-wrap {
+    min-width: 0;
+}
+
+.proof-audio-timeline {
+    width: 100%;
+    accent-color: #d19161;
+}
+
+.proof-audio-time {
+    margin-top: 0.2rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.72rem;
+    color: #ddc6b4;
+    letter-spacing: 0.03em;
+}
+
+.proof-audio-player audio {
+    display: none;
+}
+
 .detail-title {
     margin: 0 0 0.45rem;
     font-family: 'Cinzel', serif;
@@ -376,6 +433,16 @@ body {
     inset: 10px 13px;
     border-radius: 999px;
     border: 2px solid #201915;
+}
+
+@media (max-width: 520px) {
+    .proof-audio-player {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+    .proof-audio-play {
+        width: 100%;
+    }
 }
 
 .icon-box::before {
