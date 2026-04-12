@@ -7,7 +7,7 @@ const ghostRoomFavorites = {
     completionStatus: {
         'Juniper Road': 'Lengkap',
         'Fenway Drive': 'Lengkap',
-        Cafe: 'Lengkap',
+        Cafe: 'Belum Lengkap',
         Bodega: 'Belum Lengkap',
         Asylum: 'Belum Lengkap',
         'Lincoln Street': 'Belum Lengkap',

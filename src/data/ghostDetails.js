@@ -1,4 +1,5 @@
 const ghostDetails = {
+    /*
     Ana: {
         type: 'Princess',
         threat: 'Extreme',
@@ -29,6 +30,7 @@ const ghostDetails = {
         signs: 'Polos, pikiran masih bocah, diajak ngomong kadang tidak nyambung. Suka godain cewek tapi masih labil, lalu sering ghosting karena baterai habis. Kadang bela-belain main sampai lowbat 0 persen.',
         tips: 'Kalau Bayu tiba-tiba hilang, cek dulu status baterai sebelum baper. Jangan langsung tersinggung kalau omongannya nyelekit, biasanya bukan niat jahat.'
     },
+    */
 
     Aswang: {
         type: 'Predatory',

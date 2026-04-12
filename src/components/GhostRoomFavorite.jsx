@@ -36,7 +36,23 @@ export default function GhostRoomFavorite({ onGhostSelect }) {
           </span>
         </div>
 
-        <div className="mt-2 grid grid-cols-1 gap-1.5 sm:grid-cols-2 md:grid-cols-3">
+        <div className="mt-2 md:hidden">
+          <label htmlFor="favorite-map-select" className="sr-only">Pilih map</label>
+          <select
+            id="favorite-map-select"
+            value={selectedMap}
+            onChange={(event) => setSelectedMap(event.target.value)}
+            className="w-full rounded-md border border-[#3b322c] bg-white/40 px-2.5 py-2 text-sm"
+          >
+            {mapNames.map((mapName) => (
+              <option key={mapName} value={mapName}>
+                {mapName} ({getMapStatus(mapName)})
+              </option>
+            ))}
+          </select>
+        </div>
+
+        <div className="mt-2 hidden grid-cols-1 gap-1.5 sm:grid-cols-2 md:grid md:grid-cols-3">
           {mapNames.map((mapName) => (
             <button
               key={mapName}
