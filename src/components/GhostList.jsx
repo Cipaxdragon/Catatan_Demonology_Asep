@@ -9,7 +9,7 @@ export default function GhostList({
   return (
     <article className="journal-card">
       <h2 className="card-title">Setang</h2>
-      <p className="card-note">Tap atau klik setiap nama untuk melihat detail:</p>
+      <p className="card-note">Tebak Hantu Secara No Evidance :</p>
       <div className="filter-wrap" aria-label="Filter tebakan ghost">
         {filterOptions.map((filterName) => (
           <button

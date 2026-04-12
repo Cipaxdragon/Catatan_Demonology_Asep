@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from 'react'
 import ghostDetails from './data/ghostDetails.js'
 import GhostList from './components/GhostList'
 import GhostDetail from './components/GhostDetail'
+import asepProfile from './assets/credits/asep-profile.webp'
 
 const FILTER_OPTIONS = [
   'Semua',
@@ -11,7 +12,8 @@ const FILTER_OPTIONS = [
   'Butuh Trik',
   'Audio',
   'Betina',
-  'Hantu Pelari'
+  'Hantu Pelari',
+  'Hantu Pemalu'
 ]
 
 export default function App() {
@@ -83,7 +85,13 @@ export default function App() {
         <dl className="credits-grid">
           <div className="credits-row">
             <dt>Frontend Website Developer (React JS)</dt>
-            <dd>
+            <dd className="credits-person">
+              <img
+                className="credits-avatar"
+                src={asepProfile}
+                alt="Foto profil asep_salamanca"
+                loading="lazy"
+              />
               <a
                 className="credits-link"
                 href="https://www.roblox.com/search/users?keyword=asep_salamanca"
