@@ -1,0 +1,127 @@
+Aswang 
+    makin cepat pas membunuh 
+    lampat pas kena Garam(Dengar Stepnya )
+
+Banshee
+    Suara hunt beda dari yang lain
+    Agak mendep gitu 
+Demon
+    salib melayang pas kebakar
+    (ingat bukan Pas Event )
+
+Dullahan 
+    headless di foto
+    cepat pas liat orang
+    semakin cepat stepnya pas di stuckinv
+
+    Dari Slow Ke Fast
+Dybuk
+    bisa lempar mayat
+Entity 
+    bisa teleportasi 
+    bisa teleportasi dengan bayang
+
+
+Ghoul 
+    Ga bisa matikan elektronik
+    cara cek pake sb,senter hitam, senter
+Keres
+    ngincer energi terendah 
+    cara cek pake minuman kalau di abaikan berarti keres 
+
+    semakakin lambat setiap hunt 
+    kek ngurang kecepatannya
+    misal hunt pertama 200 speed
+    hunt kedua 150 speed
+
+Leviathan 
+    cara cek diliat
+    bisa melampar 2 objek sekaligus
+
+    suara lemparan khas
+    overlaping(numpuk)
+Nigmare
+    Halusinasi audio
+    suka berburu di gelap
+Oni
+    Lari Pas hunt 
+    Tipe pelari kek wendigo
+Phantom
+    Slow blink
+    Pemalu lama baru muncul
+Revenant 
+    berehneti hunt ketika membunuh 
+Shadow 
+    Suhu cuma ngurang dikit sebanyak 0.05  per detik
+
+Siren 
+    Suara perempuan
+    Memperlambat kita kalau ngejar
+
+Skinwalker
+    ada orb palsu
+    kadang niru vex / banshe
+Specter 
+    Suka Lempar Barang
+    Ga Roaming Kecuali Pas Hunt(Cek Pake Lidar Secara Berkala)
+Spirit
+    Dapat Mengubah warna lilin ,Lentera
+    jadi Warna Biru
+Umbra 
+    Ga ada Suara jejak kaki
+Vex
+    Ga kedetek lidar
+    Tembus tembok
+Wendigo 
+    Lari Kek oni 
+    tipe lari
+    Sering spawn di bedrom juniper
+    Takut spawn dekat lentera
+
+Wisp
+    Tembus api
+Wraaith 
+
+    Ga Bisa injak Garam
+
+Cara main no evi 
+    Perlatan yg penting
+    sb
+    lentera
+    Termometer
+    oil
+
+
+Tipe Di liat Yg Gampagn di cek pas awal
+    demon (salib Melayang)
+    Wraith ga injek garam 
+    Vex Di liat Nembus 
+    Wisp pake Minyak 
+    Ghoul pake SB
+    Umbra pake suara
+
+Butruh Trik
+    Keres harus Minum
+    Shadow Deketin pake Termo
+    Siren Harus kejar kejaran klo kena slow itu siren 
+
+Tipe Pelari 
+    Oni
+    Wendigo
+Tipe Pelempar
+    Specttre melembar barang jauh 
+    Leviathan lemparan Lebih banyak 
+
+Tipe pengorbanan  Butuh Pengorbanan
+    Aswang  
+        Makin cepet
+    Dybuk 
+        Lempar mayat 
+    Revenant
+        End Pas Bunuh 
+
+
+Tipe Paling sulit trio kematian
+    Entity (Teleport) sulit di deteksi
+    Nigmare
+    spirit mengubah lilin/ Lentera jadi biru 

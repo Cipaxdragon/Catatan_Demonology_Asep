@@ -20,13 +20,7 @@ const ghostDetails = {
         signs: 'Polos, pikiran masih bocah, diajak ngomong kadang tidak nyambung. Suka godain cewek tapi masih labil, lalu sering ghosting karena baterai habis. Kadang bela-belain main sampai lowbat 0 persen.',
         tips: 'Kalau Bayu tiba-tiba hilang, cek dulu status baterai sebelum baper. Jangan langsung tersinggung kalau omongannya nyelekit, biasanya bukan niat jahat.'
     },
-    Keres: {
-        type: 'Angel of Death',
-        threat: 'High',
-        evidence: ['Wither', 'Handprints', 'Spirit Box'],
-        signs: 'Mengejar hunter dengan energy paling rendah, dan di mode solo biasanya baru agresif kalau energimu sudah di bawah 90 persen. Setiap kill juga membuat kecepatannya turun sedikit.',
-        tips: 'Jaga energy tetap tinggi, pakai Energy Drink atau alat pemantau energy, dan hindari jadi target paling lemah di tim.'
-    },
+
     Aswang: {
         type: 'Predatory',
         threat: 'Very High',
@@ -75,6 +69,13 @@ const ghostDetails = {
         evidence: ['Spirit Box', 'Freezing Temps', 'Ghost Orbs'],
         signs: 'Bisa ngamuk saat mendengar percakapan dan tidak dapat mematikan elektronik.',
         tips: 'Kurangi voice chat dekat area aktif, lalu verifikasi elektronik tetap hidup sebagai indikator.'
+    },
+    Keres: {
+        type: 'Angel of Death',
+        threat: 'High',
+        evidence: ['Wither', 'Handprints', 'Spirit Box'],
+        signs: 'Mengejar hunter dengan energy paling rendah, dan di mode solo biasanya baru agresif kalau energimu sudah di bawah 90 persen. Setiap kill juga membuat kecepatannya turun sedikit.',
+        tips: 'Jaga energy tetap tinggi, pakai Energy Drink atau alat pemantau energy, dan hindari jadi target paling lemah di tim.'
     },
     Leviathan: {
         type: 'Chaotic',

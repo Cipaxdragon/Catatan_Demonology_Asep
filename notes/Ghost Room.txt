@@ -1,0 +1,132 @@
+Cara cek ghost room
+Harus cepat dapat Red pake lidar
+Atau pake termo low Term
+(Kadang term ga akurat)
+Yg ampuh lidar
+
+JUNIPER
+    Kitchen : aswang, dybuk, siren, wisp
+    Bathroom : oni, phantom, entity, shadaow,Skinwalker
+    Office : banshe, spirit, specter
+    Laudry : ghoul, nigmare, entity, oni
+    Living : vex, keres, dullahan, aswang, siren
+    Pantry : umbra, revenant, leviathan,Siren
+    Bed : entity, demon, wraith, wendigo
+    Foyerl : wisp, spirit, keres
+
+
+Fenway:
+    Kitchen : gh, ent
+    Hallway : dull
+    Garage : dem, wra, wen
+    Dining : nm, oni
+    Blue Bed : rev, lev, ker
+    Pink Bed : ban, spirit
+    Bathroom : sir, wisp
+    Master : vex, asw, dyb, dull
+    Laundry : specs
+    Living : skin, shad, phantom
+
+
+Cafe : 
+    Lt1
+        Dining : asw Dybuk
+        Coffee Bar : spirit,ent(maybe)
+        RR 1 : rev, levi
+        RR 2 : ban, umb
+        Kitchen : gh
+        Scullery : nm
+        Staff Room : oni,phan
+        Office : phantom, rev, Shadow
+        Storage : dem, Siren(Maybe)
+    Lt2
+        Alley : dull, ker
+        Dining : wen, wra,
+        MR 1 : dyb, wisp
+        MR 2 : levi,Siren (maybe)
+        Lounge : vex
+        Cleaning : spec, skin
+
+
+
+Bodega
+    Office : Specter, Shadow
+    Living Room : Umbra, Spirit,Revenant,Banshe
+    Main Store : Dullahan, Vex,Keres
+    Bathroom : Wisp, Aswang,Dybbuk
+    Cleaning Room : Ghoul
+    Cold Strage Room : Wendigo,Wraith,Demon,Phantom
+    Bedroom: Siren,Revenant(Maybe),Leviathan 
+    Storage Room : oni,Nigmare, Shadow,Phantom
+    Not Yet
+
+        Entity
+        Skinwalker
+
+
+Asylum
+    Demon : EmergencyRoom
+
+
+Lincoln
+    Ghoul : Kitchen
+    Garage : Wraith, Wendigo
+    Master Bedrom : Siren
+    Basement: Keres, vex, Dullahan
+    Bathroom : Umbra,Revenant, Banshe
+    Blue Bedrm : Shadow
+    Living Room : Nigmare, Oni
+    Pink Bedrom : Banshe
+    Master Bathroom : Dybuk,Aswang
+    Kitchen :  Demon
+    Blue Bedrom : Phantom
+    Not Yet :
+        
+        Entity
+        Leviathan
+        Skinwalker
+        Specter
+        Spirit
+        The Wisp
+
+
+Lilim Lane
+    Closet Room : Siren,Leviathan(a)
+    Bathroom : Specter, Nigmmare,Oni
+    Kitchen : Oni, Phantom
+    Living Room : Keres,Vex
+    Pink Bedrom: Banshe,Spirit(a)
+    Foyer : Shadow, Skinwalker
+    Blue Bedroom : Wraith, Wendigo
+    Laundry : Aswang,
+    Dining Room : Demon,Wendigo(a)
+    Master Bathroom: Siren,Keres(a),Wisp(a)
+    Master Bedroom : Dullahan,Aswang(a), Keres (a)
+    Staff bathroom : Ghoul(a) ,Entity(a)
+    Office : Shadow(a)
+    Staff Quarters : Specter(A)
+    
+
+Prison
+    infirmary-the wisp,
+    guard quarters-aswang,dyybuk
+    lobby-wraith,wendigo
+    library-oni,phantom
+    showers-rev,levi,umbra
+    control room-keres,dullahan,aswang
+    storage room 1-siren,levi,
+    storage room 2-vex,keres(maybe)
+    cafeteria-specter,skinwalker
+    bathroom-banshee,umbra,
+    lounge-ghoul,oni,nm
+    kitchen-shadow,phantom
+    visitor center-ghoul,entity roam
+    office-Demon,wendigo
+    cell 1 spirit
+    cell 3 Banshe
+    cell 4-spirit
+    cell 6-banshee
+    cell 7-specter,spirit,banshee
+
+Bridgewood
+    Black Bedroom : Wendigo,Demon(Maybe)
