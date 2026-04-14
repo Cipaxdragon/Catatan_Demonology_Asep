@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
+import StepComparisonPopup from './StepComparisonPopup'
 
 function formatAudioTime(totalSeconds) {
   if (!Number.isFinite(totalSeconds) || totalSeconds < 0) {
@@ -10,11 +11,16 @@ function formatAudioTime(totalSeconds) {
   return `${minutes}:${String(seconds).padStart(2, '0')}`
 }
 
+
+
 function ProofAudioPlayer({ src }) {
   const audioRef = useRef(null)
   const [isPlaying, setIsPlaying] = useState(false)
   const [currentTime, setCurrentTime] = useState(0)
   const [duration, setDuration] = useState(0)
+
+
+  // Tidak perlu reset manual, gunakan key pada audio agar benar-benar unmount & mount ulang saat src berubah
 
   useEffect(() => {
     const audio = audioRef.current
@@ -78,9 +84,16 @@ function ProofAudioPlayer({ src }) {
     setCurrentTime(nextTime)
   }
 
+  // Jangan render audio element jika src kosong/null
+  if (!src) return null
+
   return (
     <div className="proof-audio-player">
-      <audio ref={audioRef} preload="metadata">
+      <audio
+        ref={audioRef}
+        preload="metadata"
+        key={src} // force remount audio element when src changes
+      >
         <source src={src} />
         Browser tidak mendukung pemutar audio.
       </audio>
@@ -116,6 +129,7 @@ function ProofAudioPlayer({ src }) {
 }
 
 export default function GhostDetail({ ghostName, ghostInfo }) {
+  const [showStepPopup, setShowStepPopup] = useState(false)
   const femaleFilterLabel = 'Betina'
   const mediaTypeText = {
     Photo: 'Photo',
@@ -123,12 +137,29 @@ export default function GhostDetail({ ghostName, ghostInfo }) {
     Audio: 'Audio'
   }
 
+  // Cek tipe pelari dari meta (step === 'Pelari')
+  const isPelari = ghostInfo?.step === 'Pelari' || (ghostInfo?.guessFilters || []).includes('Hantu Pelari')
+
+  // Tombol floating di atas permukaan, bukan di dalam card
+  const stepButton = isPelari ? (
+    <button
+      className="step-popup-trigger step-popup-floating"
+      onClick={() => setShowStepPopup(true)}
+      style={{ position: 'fixed', top: '32px', right: '32px', zIndex: 1200 }}
+    >
+      🔊 Perbedaan Step Lari & Normal
+    </button>
+  ) : null
+
   if (!ghostInfo) {
     return (
-      <article className="journal-card">
-        <h2 className="card-title">Select a Ghost</h2>
-        <p className="card-note">Pilih ghost dari daftar untuk melihat detail investigasi.</p>
-      </article>
+      <>
+        {stepButton}
+        <article className="journal-card">
+          <h2 className="card-title">Select a Ghost</h2>
+          <p className="card-note">Pilih ghost dari daftar untuk melihat detail investigasi.</p>
+        </article>
+      </>
     )
   }
 
@@ -170,6 +201,8 @@ export default function GhostDetail({ ghostName, ghostInfo }) {
   }
 
   return (
+    <>
+    {stepButton}
     <article className="journal-card">
       <div className="card-title-row">
         <h2 className="card-title card-title-inline">{ghostName}</h2>
@@ -228,5 +261,7 @@ export default function GhostDetail({ ghostName, ghostInfo }) {
         </>
       ) : null}
     </article>
+    <StepComparisonPopup open={showStepPopup} onClose={() => setShowStepPopup(false)} />
+    </>
   )
 }

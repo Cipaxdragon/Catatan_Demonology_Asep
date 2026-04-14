@@ -1,4 +1,94 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Special+Elite&display=swap');
+/* StepComparisonPopup styles */
+
+.step-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.32);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.step-popup {
+    background: #fffbe9;
+    border: 2px solid #7d0000;
+    border-radius: 12px 0 0 12px;
+    box-shadow: -8px 0 32px rgba(0, 0, 0, 0.18);
+    padding: 2rem 1.5rem 1.5rem 2rem;
+    min-width: 320px;
+    max-width: 90vw;
+    margin-right: 0;
+    margin-left: auto;
+    position: relative;
+    animation: stepPopupIn 0.25s cubic-bezier(.4, 1.6, .6, 1) both;
+    font-family: 'Cinzel', serif !important;
+}
+
+.step-popup h2 {
+    margin-top: 0;
+    font-size: 1.2rem;
+    color: #7d0000;
+    text-align: left;
+}
+
+.step-popup-audio-list {
+    margin: 1.2rem 0 1.5rem 0;
+}
+
+.step-popup-trigger {
+    background: #fffbe9;
+    color: #7d0000;
+    border: 2px solid #7d0000;
+    border-radius: 8px;
+    padding: 0.5rem 1.2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.18s, color 0.18s;
+    font-family: 'Cinzel', serif !important;
+}
+
+.step-popup-trigger:hover {
+    background: #7d0000;
+    color: #fffbe9;
+}
+
+.step-popup-floating {
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.18);
+}
+
+from {
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+to {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.step-popup-trigger {
+    background: #fffbe9;
+    color: #7d0000;
+    border: 2px solid #7d0000;
+    border-radius: 8px;
+    padding: 0.5rem 1.2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.18s, color 0.18s;
+}
+
+.step-popup-trigger:hover {
+    background: #7d0000;
+    color: #fffbe9;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&display=swap');
 @import "tailwindcss";
 :root {
     --paper: #ece5d3;
@@ -19,7 +109,7 @@ body {
 }
 
 body {
-    font-family: 'Special Elite', serif;
+    font-family: 'cinzel', serif;
     color: var(--ink);
     background: radial-gradient(circle at 50% 0%, #4d0000 0%, #2d0000 40%, #180000 100%);
 }
@@ -46,7 +136,7 @@ body {
     letter-spacing: 0.16em;
     text-transform: uppercase;
     color: #fff2dc;
-    font-size: clamp(1.8rem, 4.6vw, 3rem);
+    font-family: 'Cinzel', serif !important;
 }
 
 .journal-subtitle {
@@ -59,7 +149,7 @@ body {
 
 .journal-card {
     border: 2px solid #2e2620;
-    border-radius: 6px;
+    font-family: 'Cinzel', serif !important;
     background: linear-gradient(160deg, rgba(255, 255, 255, 0.3), transparent 45%), var(--paper);
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.34), inset 0 0 0 1px rgba(255, 255, 255, 0.18);
     padding: 1.25rem 1rem;

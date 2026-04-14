@@ -43,10 +43,16 @@ const ghostDetails = {
         signs: 'Step situasional: makin cepat setiap kali berhasil membunuh. Saat kena garam, langkahnya terasa melambat dan perubahan step bisa didengar jelas.',
         tips: 'Uji pakai jalur garam untuk cek perubahan speed. Dengarkan ritme langkah untuk konfirmasi sebelum ambil keputusan.'
     },
+
     Banshee: {
         type: 'Harbinger',
         threat: 'High',
         evidence: ['Ghost Orbs', 'Handprints', 'Freezing Temps'],
+        mediaProof: [{
+            type: 'Audio',
+            note: 'Suara Ratapan banshee / Teriakan Berbeda dari hantu pada umumnya',
+            file: '/proofs/Wail_Banshe.mp3'
+        }],
         signs: 'Suara hunt beda dari tipe lain, cenderung lebih mendem dan khas saat mendekat.',
         tips: 'Fokus ke audio cue selama hunt. Kalau pola suaranya konsisten beda, Banshee jadi kandidat kuat.'
     },
@@ -96,6 +102,11 @@ const ghostDetails = {
         type: 'Chaotic',
         threat: 'Very High',
         evidence: ['Ghost Orbs', 'Handprints', 'Ghost Writing'],
+        mediaProof: [{
+            type: 'Audio',
+            note: 'Leviathan Memiliki Suara Lemparan Khas Suara nyaa Double karena melempar 2 barang Sekaligus Jadi Suaranya Numpuk. Terdengar Seperti laser',
+            file: '/proofs/Leviathan_Sound.mp3'
+        }],
         signs: 'Bisa melempar dua objek sekaligus. Lemparannya sering terdengar overlap/numpuk dan khas.',
         tips: 'Pantau area banyak objek. Kalau muncul double-throw berulang, Leviathan makin mungkin.'
     },
